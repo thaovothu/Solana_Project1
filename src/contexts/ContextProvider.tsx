@@ -53,10 +53,12 @@ const WalletContextProvider : FC<{children:ReactNode}> =  ({children}) =>
 
   const onError = useCallback ((error : WalletError)=>
   {
-    notify ({
-      type :"error",
-      message : error.message  ? `${error.name}:  ${error.message}`:error.name,
-    });
+    notify({
+  type: "error",
+  message: error.message ? `${error.name}: ${error.message}` : error.name,
+  description: "Something went wrong with your wallet connection.",
+});
+
     console.error(error);
   }, []);
 

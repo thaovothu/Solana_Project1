@@ -3,7 +3,7 @@ import useNotificationStore from "../stores/useNotificationStore";
 export function notify (newNotification:{
   type?: string;
   message : string;
-  description: string;
+  description?: string;
   txid?: string;
 }){
   const {notifications, set: setNotificationStore} =
