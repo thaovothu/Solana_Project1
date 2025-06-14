@@ -5,7 +5,7 @@ import {ContextProvider} from "../contexts/ContextProvider";
 import {AppBar} from "../components/AppBar";
 import {Footer} from "../components/Footer";
 import Notification from "../components/Notification"; 
-import GalleryPage from "./Gallery"; // Thêm dòng này để import trang Gallery
+ // Thêm dòng này để import trang Gallery
 //require("@solana/wallet-adapter-react-ui/style.css");
 import '@solana/wallet-adapter-react-ui/styles.css'; // ✅ đúng path mới
 import AIChat from "components/ChatAI";

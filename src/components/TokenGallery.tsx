@@ -1039,10 +1039,12 @@ const TokenGallery: React.FC<{ isConnected: boolean }> = ({ isConnected }) => {
       );
       const signature = await sendTransaction(transaction, connection);
       notify({
-        type: "success",
-        message: "Payment sent! Seller will transfer token/NFT soon.",
-        txid: signature,
-      });
+  type: "success",
+  message: "Payment sent! Seller will transfer token/NFT soon.",
+  description: "Transaction successful. You can track the transfer on Solana Explorer.",
+  txid: signature,
+});
+
     } catch (error: any) {
       notify({
         type: "error",
