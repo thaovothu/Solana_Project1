@@ -7,7 +7,7 @@ File: theme.js
 */
 
 // Lucid Icons
-lucide.createIcons();
+//lucide.createIcons();
 
 // Animation on Scroll
 AOS.init();

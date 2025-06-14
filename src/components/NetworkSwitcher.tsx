@@ -1,9 +1,34 @@
-import React from 'react'
+import {FC} from "react";
+import dynamic from "next/dynamic";
 
-const NetworkSwitcher = () => {
+import { useNetworkConfiguration } from "../contexts/NetworkConfigurationProvider";
+import NetworkSwitcher from "./SVG/NetworkSwitcherSVG";
+const NetworkSwitcher: FC = () => {
+  const {networkConfiguration, setNetworkConfiguration} = 
+  useNetworkConfiguration();
   return (
-    <div>NetworkSwitcher</div>
-  )
-}
+  <form aria-label="Network Selector">
+    <fieldset>
+      <legend className="sr-only">Select Solana Network</legend>
+      
+      <label htmlFor="network-select" className="text-white font-medium mr-2">
+        Network:
+      </label>
+      <select
+        id="network-select"
+        value={networkConfiguration}
+        onChange={(e) => setNetworkConfiguration(e.target.value || "devnet")}
+        className="select max-w-xs border-none bg-transparent outline-0"
+      >
+        <option value="mainnet-beta">Mainnet</option>
+        <option value="devnet">Devnet</option>
+        <option value="testnet">Testnet</option>
+      </select>
+    </fieldset>
+  </form>
+);
 
-export default NetworkSwitcher
+};
+export default dynamic(() => Promise.resolve(NetworkSwitcher),{
+  ssr:false,
+});
