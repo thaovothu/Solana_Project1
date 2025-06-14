@@ -99,7 +99,7 @@ export const ContactView :React.FC<ContactViewProps> = ({setOpenContact}) => {
           </div>
         </div>
       </section> */}
-      <section className="relative z-50 flex w-full items-center py-6 px-0 lg:h-screen lg:p-10" aria-labelledby="contact-heading">
+  <section className="relative z-50 flex w-full items-center py-6 px-0 lg:h-screen lg:p-10" aria-labelledby="contact-heading">
   <div className="relative z-50 container">
     <article className="bg-default-950/40 mx-auto max-w-5xl overflow-hidden rounded-2xl backdrop-blur-2xl">
       <div className="grid gap-10 lg:grid-cols-2">

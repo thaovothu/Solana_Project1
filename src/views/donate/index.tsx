@@ -132,9 +132,9 @@ export const DonateView = ({setOpenSendTransaction}) => {
         </div>
       </section> */}
       <section
-  className="relative z-50 flex w-full items-center py-6 px-0 lg:h-screen lg:p-10"
-  aria-labelledby="donate-heading"
->
+        className="relative z-50 flex w-full items-center py-6 px-0 lg:h-screen lg:p-10"
+        aria-labelledby="donate-heading"
+      >
   <div className="container">
     <article
       className="bg-default-950/40 mx-auto max-w-5xl overflow-hidden rounded-2xl backdrop-blur-2xl"
