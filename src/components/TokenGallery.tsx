@@ -1021,7 +1021,12 @@ const TokenGallery: React.FC<{ isConnected: boolean }> = ({ isConnected }) => {
 
   const handleBuy = async (token: Token) => {
     if (!publicKey) {
-      notify({ type: "error", message: "Please connect your wallet" });
+      notify({
+      type: "error",
+      message: "Please connect your wallet",
+      description: "You must connect a wallet to proceed with this action.",
+    });
+
       return;
     }
     try {
