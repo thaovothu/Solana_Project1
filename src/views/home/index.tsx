@@ -5,7 +5,10 @@ import TokenGallery from "../../components/TokenGallery";
 
 
 import pkg from "../../../package-lock.json";
-export const HomeView : FC = ({setOpenCreateModal}) => {
+interface HomeViewProps {
+  setOpenCreateModal: (value: boolean) => void;
+}
+export const HomeView: React.FC<HomeViewProps> = ({setOpenCreateModal}) => {
   
   return <section
   id="home"
