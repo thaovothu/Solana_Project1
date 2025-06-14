@@ -1168,9 +1168,11 @@ const TokenGallery: React.FC<{ isConnected: boolean }> = ({ isConnected }) => {
                       onClick={() => {
                         navigator.clipboard.writeText(selectedToken.mint);
                         notify({
-                          type: "success",
-                          message: "Copied mint address to clipboard",
-                        });
+                        type: "success",
+                        message: "Copied mint address to clipboard",
+                        description: "You can now paste this address anywhere you need.",
+                      });
+
                       }}
                       className="ml-2 bg-[#6c47e6] hover:bg-[#7e57c2] text-xs text-white px-2 py-1 rounded"
                     >
