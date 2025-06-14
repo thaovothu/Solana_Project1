@@ -8,8 +8,10 @@ import {notify} from "../../utils/notifications";
 
 import { InputView } from '../input';
 import Branding from '../../components/Branding';
-
-export const TokenMetadata:FC = ({setOpenTokenMetaData}) => {
+interface TokenMetadataProps {
+  setOpenTokenMetaData: React.Dispatch<React.SetStateAction<boolean>>;
+}
+export const TokenMetadata:React.FC<TokenMetadataProps> = ({setOpenTokenMetaData}) => {
 
   const {connection} = useConnection();
   const [tokenAddress,setTokenAddress] = useState("");

@@ -3,8 +3,14 @@ import {LuArrowRightFromLine} from "react-icons/lu";
 import { MdGeneratingTokens,MdToken } from 'react-icons/md';
 import {RiTokenSwapFill} from 'react-icons/ri';
 import {RxTokens} from 'react-icons/rx';
-
-export const FeatureView : FC = ({
+interface FeatureViewProps {
+  setOpenAirdrop: React.Dispatch<React.SetStateAction<boolean>>;
+  setOpenContact: React.Dispatch<React.SetStateAction<boolean>>;
+  setOpenCreateModal: React.Dispatch<React.SetStateAction<boolean>>;
+  setOpenSendTransaction: React.Dispatch<React.SetStateAction<boolean>>;
+  setOpenTokenMetaData: React.Dispatch<React.SetStateAction<boolean>>;
+}
+export const FeatureView: React.FC<FeatureViewProps> = ({
       setOpenAirdrop,
       setOpenContact,
       setOpenCreateModal,

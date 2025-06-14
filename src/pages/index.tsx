@@ -15,6 +15,7 @@ import {
   DonateView,
   
 } from "../views";
+import { useWallet } from '@solana/wallet-adapter-react';
 
 const Home:NextPage = (props)=> {
   const [openCreateModal, setOpenCreateModal] = useState(false);
@@ -22,6 +23,8 @@ const Home:NextPage = (props)=> {
   const [openContact, setOpenContact] = useState(false);
   const [openAirdrop, setOpenAirdrop] = useState(false);
   const [openSendTransaction, setOpenSendTransaction] = useState(false);
+  const { publicKey } = useWallet();
+
   return (
     <>
     {/* <Head>
@@ -64,7 +67,8 @@ const Home:NextPage = (props)=> {
       <HomeView setOpenCreateModal={setOpenCreateModal} />
        {/* <TokenGallery /> */}
        
-       <TokenGallery />
+      <TokenGallery isConnected={!!publicKey} />
+
 
        <ToolView 
       setOpenAirdrop={setOpenAirdrop}

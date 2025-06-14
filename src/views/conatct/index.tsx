@@ -5,7 +5,10 @@ import {notify} from "../../utils/notifications";
 
 import Branding from 'components/Branding';
 import { stat } from 'fs';
-export const ContactView : FC = ({setOpenContact}) => {
+interface ContactViewProps {
+  setOpenContact: React.Dispatch<React.SetStateAction<boolean>>;
+}
+export const ContactView :React.FC<ContactViewProps> = ({setOpenContact}) => {
 
   const [state, handelSubmit] = useForm("mpwrpvje");
 

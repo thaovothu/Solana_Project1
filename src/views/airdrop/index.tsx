@@ -7,8 +7,10 @@ import { AiOutlineClose } from 'react-icons/ai';
 
 import Branding from '../../components/Branding';
 
-
-export const AirdropView:FC = ({setOpenAirdrop}) => {
+interface AirdropViewProps {
+  setOpenAirdrop: React.Dispatch<React.SetStateAction<boolean>>;
+}
+export const AirdropView: React.FC<AirdropViewProps> = ({setOpenAirdrop}) => {
   const wallet = useWallet();
   const {connection} = useConnection();
   const {publicKey} = useWallet();

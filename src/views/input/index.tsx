@@ -1,6 +1,13 @@
 import React, {FC} from 'react'
+interface InputViewProps {
+  name: string;
+  placeholder?: string;
+  clickhandle?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  itemProp?: string; // <- thêm dòng này
+}
 
-export const InputView:FC = ({placeholder,name, clickhandle}) => {
+export const InputView: React.FC<InputViewProps> = ({ placeholder, name, clickhandle, itemProp }) => {
+
   return (
   //  <div className="mb-4">
   //     <label htmlFor="input-label" className="text-base/normal
@@ -30,7 +37,8 @@ export const InputView:FC = ({placeholder,name, clickhandle}) => {
     id="input-label"
     onChange={clickhandle}
     placeholder={placeholder}
-    itemProp="value"
+
+    itemProp={itemProp}   
     className="border-default-200 block w-full rounded border-white/10
       bg-transparent py-1.5 px-3 text-white/80 focus:border-white/25
       focus:ring-transparent"
