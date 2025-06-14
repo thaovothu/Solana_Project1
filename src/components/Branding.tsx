@@ -45,8 +45,12 @@
 
 //<aside> và <figure>
 import React, {FC} from 'react'
-
-const Branding: FC = ({ image, title, message }) => {
+interface BrandingProps {
+  image: string;
+  title: string;
+  message: string;
+}
+const Branding: FC<BrandingProps> = ({ image, title, message }) => {
   return (
     <aside className="ps-4 hidden py-4 lg:block" aria-label="Hình ảnh thương hiệu token">
       <figure className="relative h-full w-full overflow-hidden rounded-xl">
