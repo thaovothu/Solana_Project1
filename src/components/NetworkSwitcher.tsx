@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 
 import { useNetworkConfiguration } from "../contexts/NetworkConfigurationProvider";
 import NetworkSwitcher from "./SVG/NetworkSwitcherSVG";
-const NetworkSwitcher: FC = () => {
+const NetworkSwitcherComponent: FC = () => {
   const {networkConfiguration, setNetworkConfiguration} = 
   useNetworkConfiguration();
   return (
@@ -29,6 +29,6 @@ const NetworkSwitcher: FC = () => {
 );
 
 };
-export default dynamic(() => Promise.resolve(NetworkSwitcher),{
+export default dynamic(() => Promise.resolve(NetworkSwitcherComponent),{
   ssr:false,
 });
